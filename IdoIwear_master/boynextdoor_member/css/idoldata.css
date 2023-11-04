@@ -1,0 +1,87 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+
+img{
+    width: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* 원하는 간격 크기로 조정할 수 있습니다 */
+    margin-top: 40px;
+    padding: 0 20px; /* 좌우 여백을 설정합니다 */
+    
+  box-sizing: border-box; /* 패딩을 포함한 전체 너비로 설정합니다 */
+  }
+  
+  .image-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s; /* 이미지 확대 트랜지션 효과 추가 */
+  }
+
+  .image-wrapper img:hover {
+    transform: scale(1.05); /* 호버 시 이미지 확대 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 추가 */
+}
+  
+  p {
+    text-align: center; /* 텍스트를 가운데 정렬합니다 */
+    margin-top: 10px;
+  }
+  h1{
+    margin-top: 30px;
+    margin-left: 32px;
+  }
+hr{
+  margin-top: 10px;
+  margin-left:30px;
+  width: 30%;
+}
+.custom-button{
+  width: 550px;
+}
+
+@media all and (max-width:767px){/*폰*/
+
+  img{
+    width: 350px;
+  }
+  .container {
+    flex-direction: column; /* 화면 너비가 768px 이하일 때 이미지 위아래로 배치 */
+    align-items: center;
+}
+.button-wrapper {
+  flex-direction: row;
+}
+
+.custom-button {
+  width: 45%; /* 버튼 너비 조정 */
+}
+
+}
+@media all and (min-width:768px) and (max-width:1023px){ /*태블릿*/
+
+  img{
+    width: 450px;
+  }
+  .container {
+    flex-direction: column; /* 화면 너비가 768px 이하일 때 이미지 위아래로 배치 */
+    align-items: center;
+}
+.button-wrapper {
+  flex-direction: row;
+}
+
+.custom-button {
+  width: 45%; /* 버튼 너비 조정 */
+}
+
+}
