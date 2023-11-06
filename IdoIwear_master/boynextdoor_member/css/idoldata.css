@@ -4,7 +4,8 @@ img{
     width: 500px;
 }
 
-.container {
+
+.container, .Button_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +50,188 @@ hr{
   width: 550px;
 }
 
+/* mainSlide 내부 요소들 가운데 정렬 */
+.mainSlide {
+  text-align: center;
+}
+
+/* slick-slider의 previous와 next 버튼 가운데 정렬 */
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* slick-slider의 이미지 요소 가운데 정렬 */
+.slick-slider img {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* mainSlide 내부 요소들 가운데 정렬 */
+.mainSlide {
+  text-align: center;
+}
+
+/* slick-slider의 previous와 next 버튼 수평 정렬 */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 8%;
+}
+
+.slick-next {
+  right: 8%;
+}
+
+/* slick-slider의 이미지 요소 수평 정렬 */
+.slick-slide img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* mainSlide 내부 요소들 가운데 정렬 */
+.mainSlide {
+  text-align: center;
+}
+
+/* slick-slider의 previous와 next 버튼 가운데 정렬 */
+.slick-prev,
+.slick-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    padding: 70px;
+    
+}
+/*여기부터 */
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+/*여기까지 slick.css임*/
+
+
 
 
 @media all and (max-width:767px){/*폰*/
@@ -66,6 +249,7 @@ hr{
 .custom-button {
   width: 45%; /* 버튼 너비 조정 */
 }
+
 
 }
 @media all and (min-width:768px) and (max-width:1023px){ /*태블릿*/
