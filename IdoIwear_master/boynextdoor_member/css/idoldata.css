@@ -230,9 +230,9 @@ hr{
     display: none;
 }
 /*여기까지 slick.css임*/
-
-
-
+.slick-arrow{width: 36px; height: 36px; text-indent: -9999px; overflow: hidden;}
+.slick-prev{background: url(../../main_img/previous.png) no-repeat 0 0;}
+.slick-next{background: url(../../main_img/next.png) no-repeat 0 0;}
 
 @media all and (max-width:767px){/*폰*/
 
