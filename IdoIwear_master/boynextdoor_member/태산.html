@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/idoldata.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <title>태산_정보</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(function(){
+        $('.mainSlide').slick();
+    
+        function updateVisibility() {
+          const tabletWidth = 1023; // 변경: 1023px 이하일 때 보이도록 (조절 가능)
+          const mainSlide = document.querySelector('.mainSlide');
+    
+          if (window.innerWidth <= tabletWidth) {
+            mainSlide.style.display = 'block';
+          } else {
+            mainSlide.style.display = 'none';
+          }
+        }
+    
+        // 페이지 로드 시 및 창 크기 변경 시 실행
+        updateVisibility();
+    
+        // 창 크기 변경 이벤트 핸들러 등록
+        window.addEventListener("resize", updateVisibility);
+      });
+    </script>
+    
+</head>
+<body>
+  <div class="allContainer">
+    <div class="container">
+      <div class="image-wrapper">
+        <img src="boynextdoor_1_img/태산.jpg" alt="" >
+      </div>
+      <div class="image-wrapper">
+        <img src="boynextdoor_1_img/태산_모자.png" alt="">
+      </div>
+    </div>
+    <div class="mainSlide">
+      <div><img src="boynextdoor_1_img/태산.jpg" alt="" ></div>
+      <div><img src="boynextdoor_1_img/태산_모자.png" alt="" ></div>
+    </div>
+          
+    <p>명재현 2023.10.16</p>
+    <h1>착용상품</h1>
+    <hr>
+    <div class="Button_container">
+
+      <button class="custom-button">내 버튼</button>
+      <button class="custom-button">내 버튼</button>
+    </div>
+  </div>
+   
+      
+</body>
+</html>
