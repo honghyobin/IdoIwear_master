@@ -9,40 +9,62 @@
     <title>태산22_정보</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(function(){
+        $('.mainSlide').slick();
+    
+        function updateVisibility() {
+          const tabletWidth = 1023; // 변경: 1023px 이하일 때 보이도록 (조절 가능)
+          const mainSlide = document.querySelector('.mainSlide');
+    
+          if (window.innerWidth <= tabletWidth) {
+            mainSlide.style.display = 'block';
+          } else {
+            mainSlide.style.display = 'none';
+          }
+        }
+    
+        // 페이지 로드 시 및 창 크기 변경 시 실행
+        updateVisibility();
+    
+        // 창 크기 변경 이벤트 핸들러 등록
+        window.addEventListener("resize", updateVisibility);
+      });
+    </script>
     
 </head>
 <body>
   <div class="allContainer">
     <div class="container">
-
+        <div class="image-wrapper">
+          <a href="https://www.farfetch.com/kr/shopping/men/raf-simons--item-19583371.aspx">
+            <img src="../boynextdoor_member/boynextdoor_1_img/태산_22_옷.png" alt="">
+          </a>
+        </div>
       <div class="image-wrapper">
-        <a href="https://www.farfetch.com/kr/shopping/men/raf-simons--item-19583371.aspx"><img src="boynextdoor_1_img/태산_22_옷.png" alt=""></a>
-
+        <img src="../boynextdoor_member/boynextdoor_1_img/태산_22.png" alt="" >
       </div>
-      <div class="image-wrapper">
-        <img src="boynextdoor_1_img/태산_22.png" alt="" >
-      </div>
-     
       <div class="image-wrapper">
         <a href="https://product.29cm.co.kr/catalog/1757609">
-            <img src="boynextdoor_1_img/태산_22_목걸이.png" alt="">
+          <img src="../boynextdoor_member/boynextdoor_1_img/태산_22_목걸이.png" alt="">
         </a>
-    </div>
-    
-    </div>
-    <div class="mainSlide">
-      <div><img src="boynextdoor_1_img/태산_22.png" alt="" ></div>
-      <a href="https://www.farfetch.com/kr/shopping/men/raf-simons--item-19583371.aspx"><div><img src="boynextdoor_1_img/태산_22_옷.png" alt="" ></div></a>
-      <a href="https://product.29cm.co.kr/catalog/1757609">
-        <div>
-          <img src="boynextdoor_1_img/태산_22_목걸이.png" alt="" >
-        </div>
-      </a>
-      
+      </div>
     </div>
 
+    <div class="mainSlide">
+      <div class="mainSlide">
+        <div><img src="boynextdoor_1_img/태산_22.png" alt="" ></div>
+        <a href="https://www.farfetch.com/kr/shopping/men/raf-simons--item-19583371.aspx"><div><img src="boynextdoor_1_img/태산_22_옷.png" alt="" ></div></a>
+        <a href="https://product.29cm.co.kr/catalog/1757609">
+          <div>
+            <img src="boynextdoor_1_img/태산_22_목걸이.png" alt="" >
+          </div>
+        </a>
+        
+      </div>
+      </div>
           
-    <p>명재현 2023.10.16</p>
+    <p>태산 2023.07.13</p>
     <h1>착용상품</h1>
     <hr>
     <div class="Button_container">
