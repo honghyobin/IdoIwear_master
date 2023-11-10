@@ -1,22 +1,31 @@
-* {margin:0;padding:0;box-sizing:border-box;}
+* {margin:0;padding:0;box-sizing:border-box;
+
+}
 
 img{
     width: 500px;
     max-height: 800px;
 }
-
+ hr{
+  margin-bottom: 40px;
+ }
 
 .container, .Button_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px; /* 원하는 간격 크기로 조정할 수 있습니다 */
+    gap: 10px; /* 원하는 간격 크기로 조정할 수 있습니다 */
     margin-top: 40px;
-    padding: 0 20px; /* 좌우 여백을 설정합니다 */
+    padding: 20px 20px; /* 좌우 여백을 설정합니다 */
     
   box-sizing: border-box; /* 패딩을 포함한 전체 너비로 설정합니다 */
   }
-  
+  .Button_container{
+    gap:100px
+  }
+  .Button_container>img{
+    padding-left: 100px;
+  }
   .image-wrapper {
     display: flex;
     align-items: center;
@@ -33,7 +42,33 @@ img{
     transform: scale(1.05); /* 호버 시 이미지 확대 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 추가 */
 }
-  
+.custom-button {
+  background-color: #838383; /* 버튼 배경색 */
+  color: white; /* 텍스트 색상 */
+  border: none; /* 테두리 없음 */
+  padding: 10px 20px; /* 내부 여백 */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* 테두리 둥글게 */
+  white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+  overflow: hidden; /* 내용이 넘칠 경우 감춤 */
+  text-overflow: ellipsis; /* 넘칠 경우 점점 표시 */
+  max-width: 500px; /* 버튼 최대 너비 설정 (조절 가능) */
+  height: 40px;
+}
+
+
+.custom-button{
+  line-height: 12px;
+}
+
+.custom-button:hover {
+  background-color: #aaaaaa; /* 마우스 호버 시 배경색 변경 */
+}
+
   p {
     text-align: center; /* 텍스트를 가운데 정렬합니다 */
     margin-top: 10px;
@@ -49,6 +84,7 @@ hr{
 }
 .custom-button{
   width: 550px;
+ border: none;
 }
 
 /* mainSlide 내부 요소들 가운데 정렬 */
@@ -248,7 +284,8 @@ hr{
 }
 
 .custom-button {
-  width: 45%; /* 버튼 너비 조정 */
+  width: 100%; /*버튼 너비 조정 */
+  max-width: 180px;
 }
 
 
@@ -266,7 +303,9 @@ hr{
 }
 
 .custom-button {
-  width: 45%; /* 버튼 너비 조정 */
+  width: 100%; /* 버튼 너비 조정 */
+  max-width: 400px;
 }
 
 }
+
