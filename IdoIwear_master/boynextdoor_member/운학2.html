@@ -1,76 +1,93 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/idoldata.css">
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <title>운학_2_정보</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="../boynextdoor_member/css/idoldata_3.css">
+    <style>
+        /* 슬라이더에 대한 스타일은 여기에 추가하세요 */
+    </style>
     <script>
-      $(function(){
-        $('.mainSlide').slick();
-    
-        function updateVisibility() {
-          const tabletWidth = 1023; // 변경: 1023px 이하일 때 보이도록 (조절 가능)
-          const mainSlide = document.querySelector('.mainSlide');
-    
-          if (window.innerWidth <= tabletWidth) {
-            mainSlide.style.display = 'block';
-          } else {
-            mainSlide.style.display = 'none';
-          }
-        }
-    
-        // 페이지 로드 시 및 창 크기 변경 시 실행
-        updateVisibility();
-    
-        // 창 크기 변경 이벤트 핸들러 등록
-        window.addEventListener("resize", updateVisibility);
-      });
+        document.addEventListener("DOMContentLoaded", function() {
+            function updateVisibility() {
+                const tabletWidth = 1023;
+                const slidebox = document.querySelector('.slidebox');
+
+                if (window.innerWidth <= tabletWidth) {
+                    slidebox.style.display = 'block';
+                } else {
+                    slidebox.style.display = 'none';
+                }
+            }
+
+            // 페이지 로드 시 및 창 크기 변경 시 실행
+            updateVisibility();
+
+            // 창 크기 변경 이벤트 핸들러 등록
+            window.addEventListener("resize", updateVisibility);
+        });
     </script>
-    
 </head>
 <body>
-  <div class="allContainer">
-    <div class="container">
-    <div class="image-wrapper">
-      <a href="https://m.gragg.kr/product/double-square-case-clear/266/category/49/display/1/"><img src="boynextdoor_1_img/운학_2_케이스.png" alt=""></a>
-    </div>
-    <div class="image-wrapper">
-      <img src="boynextdoor_1_img/운학_2.png" alt="" >
-    </div>
-   
-    <div class="image-wrapper">
-      <a href="https://kream.co.kr/products/100859">
-          <img src="boynextdoor_1_img/운학_2_선글라스.png" alt="">
-      </a>
-  </div>
-  
-  </div>
-  <div class="mainSlide">
-    <div><img src="boynextdoor_1_img/운학_2.png" alt="" ></div>
-    <a href="https://m.gragg.kr/product/double-square-case-clear/266/category/49/display/1/"><div><img src="boynextdoor_1_img/운학_2_케이스.png" alt="" ></div></a>
-    <a href="https://kream.co.kr/products/100859">
-      <div>
-        <img src="boynextdoor_1_img/운학_2_선글라스.png" alt="" >
-      </div>
-    </a>
-    
-  </div>
-          
-    <p>운학 2023.09.03</p>
-    <h1>착용상품</h1>
-    <hr>
-    <div class="Button_container">
+    <div class="allContainer">
+        <div class="container">
+            <!-- 이미지 래퍼 추가 -->
+            <div class="image-wrapper">
+                <a href="https://kream.co.kr/products/100859">
+                    <img src="boynextdoor_1_img/운학_2_선글라스.png" alt="이미지 1">
+                </a>
+            </div>
+            <div class="image-wrapper">
+                <img src="boynextdoor_1_img/운학_2.png" alt="이미지 2">
+            </div>
+            <div class="image-wrapper">
+                <a href="https://m.gragg.kr/product/double-square-case-clear/266/category/49/display/1/">
+                    <img src="boynextdoor_1_img/운학_2_케이스.png" alt="이미지 3">
+                </a>
+            </div>
+        </div>
 
-      <a href="https://m.gragg.kr/product/double-square-case-clear/266/category/49/display/1/"><button class="custom-button">운학의 "케이스" 보러가기</button></a>
-      <a href="https://kream.co.kr/products/100859"><button class="custom-button">운학의 "선글라스" 보러가기</button></a>
-    </div>
+        <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked="">
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <a href="">
+                        <label for="slide03" class="prev"></label>
+                        <img src="boynextdoor_1_img/운학_2.png" alt="이미지 1">
+                        <label for="slide02" class="next"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a href="https://kream.co.kr/products/100859">
+                        <label for="slide01" class="prev"></label>
+                        <img src="boynextdoor_1_img/운학_2_선글라스.png" alt="이미지 2">
+                        <label for="slide03" class="next"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a href="https://m.gragg.kr/product/double-square-case-clear/266/category/49/display/1/">
+                        <label for="slide02" class="prev"></label>
+                        <img src="boynextdoor_1_img/운학_2_케이스.png" alt="이미지 3">
+                        <label for="slide01" class="next"></label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <p>운학 2023.09.03</p>
+      <h1>착용상품</h1>
+      <hr>
+      <div class="Button_container">
+          <a href="https://kream.co.kr/products/100859"><button class="custom-button">운학 "선글라스" 보러가기</button></a>
+          <a href="https://m.gragg.kr/product/double-square-case-clear/266/category/49/display/1/"><button class="custom-button">운학의 "케이스" 보러가기</button></a>
+      </div>
   </div>
+
+        <!-- 나머지 내용 추가 -->
    
-      
 </body>
 </html>

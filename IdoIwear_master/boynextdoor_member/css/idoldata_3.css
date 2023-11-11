@@ -106,8 +106,8 @@ hr{
   .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
   .slidebox .slidelist .slideitem > a img {max-width:100%;}
   .slidebox .slidelist .slideitem > a label {position:absolute;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
-  .slidebox .slidelist .slideitem > a label.prev {left:20px;background:#333 url('./img/left-arrow.png') center center / 50% no-repeat;}
-  .slidebox .slidelist .slideitem > a label.next {right:20px;background:#333 url('./img/right-arrow.png') center center / 50% no-repeat;}
+  .slidebox .slidelist .slideitem > a label.prev {left:20px;background:#333 url('../../img/left-arrow.png') center center / 50% no-repeat;}
+  .slidebox .slidelist .slideitem > a label.next {right:20px;background:#333 url('../../img/right-arrow.png') center center / 50% no-repeat;}
   
   
   [name="slide"] {display:none;}
@@ -116,6 +116,8 @@ hr{
 
 #slide01:checked ~ .slidelist .slideitem {transform:translateX(0);}
 #slide02:checked ~ .slidelist .slideitem {transform:translateX(-100%);}
+#slide03:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 15s infinite;}
+
 
  
  @keyframes slide01 {

@@ -1,79 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../boynextdoor_member/css/idoldata.css">
-  <title>명재현_정보</title>
 <head>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        function updateVisibility() {
-            const tabletWidth = 1023; // 변경: 1023px 이하일 때 보이도록 (조절 가능)
-            const slidebox = document.querySelector('.slidebox');
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../boynextdoor_member/css/idoldata_3.css">
+    <style>
+        /* 슬라이더에 대한 스타일은 여기에 추가하세요 */
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function updateVisibility() {
+                const tabletWidth = 1023;
+                const slidebox = document.querySelector('.slidebox');
 
-            if (window.innerWidth <= tabletWidth) {
-                slidebox.style.display = 'block';
-            } else {
-                slidebox.style.display = 'none';
+                if (window.innerWidth <= tabletWidth) {
+                    slidebox.style.display = 'block';
+                } else {
+                    slidebox.style.display = 'none';
+                }
             }
-        }
 
-        // 페이지 로드 시 및 창 크기 변경 시 실행
-        updateVisibility();
+            // 페이지 로드 시 및 창 크기 변경 시 실행
+            updateVisibility();
 
-        // 창 크기 변경 이벤트 핸들러 등록
-        window.addEventListener("resize", updateVisibility);
-    });
-</script>
+            // 창 크기 변경 이벤트 핸들러 등록
+            window.addEventListener("resize", updateVisibility);
+        });
+    </script>
 </head>
 <body>
-  <div class="allContainer">
-    <div class="container">
-      <div class="image-wrapper">
-        <a href="https://wiisnt.co.kr/product/detail.html?product_no=7583&cate_no=118&display_group=1"><img src="../" alt=""></a>
-    </div>
-        <div class="image-wrapper">
-            <img src="../boynextdoor_1_img/명재현.jpg" alt="">
+    <div class="allContainer">
+        <div class="container">
+            <!-- 이미지 래퍼 추가 -->
+            <div class="image-wrapper">
+                <a href="https://smartstore.naver.com/nice4259/products/8300350874?">
+                    <img src="../boynextdoor_member/boynextdoor_1_img/명재현안경.png" alt="이미지 1">
+                </a>
+            </div>
+            <div class="image-wrapper">
+                <img src="../boynextdoor_1_img/명재현.jpg" alt="이미지 2">
+            </div>
+            <div class="image-wrapper">
+                <a href="https://www.feelway.com/view_goods.php?g_no=6688901649&cafe_mkt=naver_ks&utm_source=naver&utm_medium=cpc&utm_campaign=shopping-naver-cpc&NaPm=ct%3Dlnvhjj6o%7Cci%3D1c2793b561886c8a30dbdde0f1e38e0a62501518%7Ctr%3Dsls%7Csn%3D1154907%7Chk%3Db590cbaffda1cda7d4d7806b64a5682849ce48c3">
+                    <img src="..//boynextdoor_member/boynextdoor_1_img/명재현 후드.jpg" alt="이미지 3">
+                </a>
+            </div>
         </div>
-        <div class="image-wrapper">
-            <a href="https://wiisnt.co.kr/product/detail.html?product_no=7583&cate_no=118&display_group=1"><img src="../boynextdoor_member/boynextdoor_1_img/명재현 후드.jpg" alt=""></a>
+
+        <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked="">
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <a href="">
+                        <label for="slide03" class="prev"></label>
+                        <img src="../boynextdoor_1_img/명재현.jpg" alt="이미지 1">
+                        <label for="slide02" class="next"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a href="https://smartstore.naver.com/nice4259/products/8300350874?">
+                        <label for="slide01" class="prev"></label>
+                        <img src="..//boynextdoor_member/boynextdoor_1_img/명재현안경.png" alt="이미지 2">
+                        <label for="slide03" class="next"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a href="https://www.feelway.com/view_goods.php?g_no=6688901649&cafe_mkt=naver_ks&utm_source=naver&utm_medium=cpc&utm_campaign=shopping-naver-cpc&NaPm=ct%3Dlnvhjj6o%7Cci%3D1c2793b561886c8a30dbdde0f1e38e0a62501518%7Ctr%3Dsls%7Csn%3D1154907%7Chk%3Db590cbaffda1cda7d4d7806b64a5682849ce48c3">
+                        <label for="slide02" class="prev"></label>
+                        <img src="..//boynextdoor_member/boynextdoor_1_img/명재현 후드.jpg" alt="이미지 3">
+                        <label for="slide01" class="next"></label>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </div>
-  <div class="slidebox">
-    <input type="radio" name="slide" id="slide01" checked="">
-    <input type="radio" name="slide" id="slide02">
-    <input type="radio" name="slide" id="slide03">
-    <ul class="slidelist">
-      <li class="slideitem">
-        <a>
-          <label for="slide03" class="prev"></label>
-          <img src="../boynextdoor_1_img/명재현.jpg">
-          <label for="slide02" class="next"></label>
-        </a>
-      </li>
-      <li class="slideitem">
-        <a>
-          <label for="slide01" class="prev"></label>
-          <img src="../boynextdoor_1_img/명재현2.jpg">
-          <label for="slide03" class="next"></label>
-        </a>
-      </li>
-      <li class="slideitem">
-        <a>
-          <label for="slide02" class="prev"></label>
-          <img src="../boynextdoor_1_img/명재현2.jpg">
-          <label for="slide01" class="next"></label>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <p>조 2023.00.00</p>
-  <h1>착용상품</h1>
-  <div class="Button_container">
-    <a href="https://wiisnt.co.kr/product/detail.html?product_no=7583&cate_no=118&display_group=1"><button class="custom-button">조 "가방" 보러가기</button></a>
-    <a href="https://wiisnt.co.kr/product/detail.html?product_no=7583&cate_no=118&display_group=1"><button class="custom-button">조 "가방" 보러가기</button></a>
-</div>
+      </div>
+      <p>명재현 2023.10.16</p>
+      <h1>착용상품</h1>
+      <hr>
+      <div class="Button_container">
+          <a href="https://smartstore.naver.com/nice4259/products/8300350874?"><button class="custom-button">명재현의 "안경" 보러가기</button></a>
+          <a href="https://www.feelway.com/view_goods.php?g_no=6688901649&cafe_mkt=naver_ks&utm_source=naver&utm_medium=cpc&utm_campaign=shopping-naver-cpc&NaPm=ct%3Dlnvhjj6o%7Cci%3D1c2793b561886c8a30dbdde0f1e38e0a62501518%7Ctr%3Dsls%7Csn%3D1154907%7Chk%3Db590cbaffda1cda7d4d7806b64a5682849ce48c3"><button class="custom-button">명재현의 "후드" 보러가기</button></a>
+      </div>
   </div>
 
+        <!-- 나머지 내용 추가 -->
+   
 </body>
 </html>

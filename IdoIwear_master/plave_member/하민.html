@@ -1,79 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../boynextdoor_member/css/idoldata.css">
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <title>하민_정보</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-      $(function(){
-        $('.mainSlide').slick();
-    
-        function updateVisibility() {
-          const tabletWidth = 1023; // 변경: 1023px 이하일 때 보이도록 (조절 가능)
-          const mainSlide = document.querySelector('.mainSlide');
-    
-          if (window.innerWidth <= tabletWidth) {
-            mainSlide.style.display = 'block';
-          } else {
-            mainSlide.style.display = 'none';
-          }
-        }
-    
-        // 페이지 로드 시 및 창 크기 변경 시 실행
-        updateVisibility();
-    
-        // 창 크기 변경 이벤트 핸들러 등록
-        window.addEventListener("resize", updateVisibility);
-      });
-    </script>
-    
-</head>
-<body>
-  <div class="allContainer">
-    <div class="container">
-      <div class="image-wrapper">
-        <a href="https://www.musinsa.com/app/goods/2487576"><img src="../plave_1_img/하민_모자.jpg" alt=""></a>
-
-      </div>
-      <div class="image-wrapper">
-        <img src="../plave_1_img/하민.jpg" alt="" >
-      </div>
-     
-      <div class="image-wrapper">
-        <a href="https://www.musinsa.com/app/goods/2999686">
-            <img src="../plave_1_img/하민_후드.jpg" alt="">
+<html><head><style>
+  /* 리셋 CSS */
+  * {margin:0;padding:0;box-sizing:border-box;}
+  ul, li {list-style:none;}
+  
+  /* 슬라이드 Style */
+  .slidebox {max-width:1000px;margin:0 auto;}
+  .slidebox .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
+  .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;transition:all 1s;}
+  .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+  .slidebox .slidelist .slideitem > a img {max-width:100%;}
+  .slidebox .slidelist .slideitem > a label {position:absolute;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+  .slidebox .slidelist .slideitem > a label.prev {left:20px;background:#333 url('./img/left-arrow.png') center center / 50% no-repeat;}
+  .slidebox .slidelist .slideitem > a label.next {right:20px;background:#333 url('./img/right-arrow.png') center center / 50% no-repeat;}
+  
+  
+  [name="slide"] {display:none;}
+  #slide01:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 15s infinite;}
+  #slide02:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 15s infinite;}
+  #slide03:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 15s infinite;}
+  
+  
+  @keyframes slide01 {
+    0% {left:0%;}
+    33% {left:0%;}
+    34% {left:-100%}
+    66% {left:-100%;}
+    67% {left:-200%;}
+    99% {left:-200%;}
+    100% {left:0%;}
+  }
+  
+  @keyframes slide02 {
+    0% {left:0%;}
+    33% {left:0%;}
+    34% {left:-100%;}
+    66% {left:-100%;}
+    67% {left:100%;}
+    99% {left:100%;}
+    100% {left:0%;}
+  }
+  
+  @keyframes slide03 {
+    0% {left:0%;}
+    33% {left:0%;}
+    34% {left:200%;}
+    66% {left:200%;}
+    67% {left:100%;}
+    99% {left:100%;}
+    100% {left:0%;}
+  }
+  </style>
+  
+  
+  </head><body><div class="slidebox">
+    <input type="radio" name="slide" id="slide01" checked="">
+    <input type="radio" name="slide" id="slide02">
+    <input type="radio" name="slide" id="slide03">
+    <ul class="slidelist">
+      <li class="slideitem">
+        <a>
+          <label for="slide03" class="prev"></label>
+          <img src="./img/slide01.jpg">
+          <label for="slide02" class="next"></label>
         </a>
-    </div>
-    
-    </div>
-    <div class="mainSlide">
-      <div><img src="../plave_1_img/하민.jpg" alt="" ></div>
-      <a href="https://www.musinsa.com/app/goods/2487576"><div><img src="../plave_1_img/하민_모자.jpg" alt="" ></div></a>
-      <a href="https://www.musinsa.com/app/goods/2999686">
-        <div>
-          <img src="../plave_1_img/하민_후드.jpg" alt="" >
-        </div>
-      </a>
-      
-    </div>
-          
-    <p>하민 2023.09.17</p>
-    <h1>착용상품</h1>
-    <hr>
-    <div class="Button_container">
-
-      <a href="https://www.musinsa.com/app/goods/2487576"><button class="custom-button">하민의 "모자" 보러가기</button></a>
-      <a href="https://www.musinsa.com/app/goods/2999686"><button class="custom-button">하민의 "후드" 보러가기</button></a>
-      
-      
-    </div>
+      </li>
+      <li class="slideitem">
+        <a>
+          <label for="slide01" class="prev"></label>
+          <img src="./img/slide02.jpg">
+          <label for="slide03" class="next"></label>
+        </a>
+      </li>
+      <li class="slideitem">
+        <a>
+          <label for="slide02" class="prev"></label>
+          <img src="./img/slide03.jpg">
+          <label for="slide01" class="next"></label>
+        </a>
+      </li>
+    </ul>
   </div>
-   
-      
-</body>
-</html>
+  </body></html>
