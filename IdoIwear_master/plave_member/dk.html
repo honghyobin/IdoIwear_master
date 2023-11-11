@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+    /* 리셋 CSS */
+    * {margin:0;padding:0;box-sizing:border-box;}
+    ul, li {list-style:none;}
+    
+    /* 슬라이드 Style */
+    .slidebox {max-width:1000px;margin:0 auto;}
+    .slidebox .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
+    .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;}
+    .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+    .slidebox .slidelist .slideitem > a img {max-width:100%;}
+    .slidebox .slidelist .slideitem > a label {position:absolute;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+    .slidebox .slidelist .slideitem > a label.prev {left:20px;background:#333 url('./img/left-arrow.png') center center / 50% no-repeat;}
+    .slidebox .slidelist .slideitem > a label.next {right:20px;background:#333 url('./img/right-arrow.png') center center / 50% no-repeat;}
+    
+    [name="slide"] {display:none;}
+    
+    /* 아래 두 라인을 추가하여 자동 슬라이딩 제거 */
+    .slidebox:hover [name="slide"] {animation-play-state: paused;}
+    .slidebox:hover [name="slide"]:checked ~ .slidelist .slideitem {animation: none;}
+
+    /* #slide01:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 10s infinite;} */
+    /* #slide02:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 10s infinite;} */
+    
+    /* 애니메이션 제거 후, 초기 상태로 첫 번째 슬라이드를 보이도록 변경 */
+    #slide01:checked ~ .slidelist .slideitem {transform:translateX(0);}
+    #slide02:checked ~ .slidelist .slideitem {transform:translateX(-100%);}
+
+    /* @keyframes 부분 삭제 */
+</style>
+</head>
+<body>
+    <div class="slidebox">
+        <input type="radio" name="slide" id="slide01" checked="">
+        <input type="radio" name="slide" id="slide02">
+        <ul class="slidelist">
+            <li class="slideitem">
+                <a>
+                    <!-- 라벨과 이미지 부분은 그대로 유지 -->
+                    <label for="slide02" class="prev"></label>
+                    <img src="../boynextdoor_1_img/리우.jpg">
+                    <label for="slide02" class="next"></label>
+                </a>
+            </li>
+            <li class="slideitem">
+                <a>
+                    <!-- 라벨과 이미지 부분은 그대로 유지 -->
+                    <label for="slide01" class="prev"></label>
+                    <img src="../boynextdoor_1_img/리우.jpg">
+                    <label for="slide01" class="next"></label>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
