@@ -1,0 +1,188 @@
+* {margin:0;padding:0;box-sizing:border-box;
+
+}
+
+img{
+    width: 500px;
+    max-height: 800px;
+}
+ hr{
+  margin-bottom: 40px;
+ }
+
+.container, .Button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 원하는 간격 크기로 조정할 수 있습니다 */
+    margin-top: 40px;
+    padding: 20px 20px; /* 좌우 여백을 설정합니다 */
+    
+  box-sizing: border-box; /* 패딩을 포함한 전체 너비로 설정합니다 */
+  }
+  .Button_container{
+    gap:100px
+  }
+  .Button_container>img{
+    padding-left: 100px;
+  }
+  .image-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s; /* 이미지 확대 트랜지션 효과 추가 */
+  }
+
+  .image-wrapper img:hover {
+    transform: scale(1.05); /* 호버 시 이미지 확대 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 추가 */
+}
+.custom-button {
+  background-color: #838383; /* 버튼 배경색 */
+  color: white; /* 텍스트 색상 */
+  border: none; /* 테두리 없음 */
+  padding: 10px 20px; /* 내부 여백 */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* 테두리 둥글게 */
+  white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+  overflow: hidden; /* 내용이 넘칠 경우 감춤 */
+  text-overflow: ellipsis; /* 넘칠 경우 점점 표시 */
+  max-width: 500px; /* 버튼 최대 너비 설정 (조절 가능) */
+  height: 40px;
+}
+
+
+.custom-button{
+  line-height: 12px;
+}
+
+.custom-button:hover {
+  background-color: #aaaaaa; /* 마우스 호버 시 배경색 변경 */
+}
+
+  p {
+    text-align: center; /* 텍스트를 가운데 정렬합니다 */
+    margin-top: 10px;
+  }
+  h1{
+    margin-top: 30px;
+    margin-left: 32px;
+  }
+hr{
+  margin-top: 10px;
+  margin-left:30px;
+  width: 30%;
+}
+.custom-button{
+  width: 550px;
+ border: none;
+}
+.slidebox{
+  text-align: center;
+  padding-top: 100px;
+}
+
+
+ /* 리셋 CSS */
+
+ /* 슬라이드 Style */
+  /* 리셋 CSS */
+  * {margin:0;padding:0;box-sizing:border-box;}
+  ul, li {list-style:none;}
+  
+  /* 슬라이드 Style */
+  .slidebox {max-width:1000px;margin:0 auto;}
+  .slidebox .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
+  .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;}
+  .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+  .slidebox .slidelist .slideitem > a img {max-width:100%;}
+  .slidebox .slidelist .slideitem > a label {position:absolute;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+  .slidebox .slidelist .slideitem > a label.prev {left:20px;background:#333 url('./img/left-arrow.png') center center / 50% no-repeat;}
+  .slidebox .slidelist .slideitem > a label.next {right:20px;background:#333 url('./img/right-arrow.png') center center / 50% no-repeat;}
+  
+  
+  [name="slide"] {display:none;}
+  .slidebox:hover [name="slide"] {animation-play-state: paused;}
+.slidebox:hover [name="slide"]:checked ~ .slidelist .slideitem {animation: none;}
+
+#slide01:checked ~ .slidelist .slideitem {transform:translateX(0);}
+#slide02:checked ~ .slidelist .slideitem {transform:translateX(-100%);}
+
+ 
+ @keyframes slide01 {
+   0% {left:0%;}
+   33% {left:0%;}
+   34% {left:-100%}
+   66% {left:-100%;}
+   67% {left:-200%;}
+   99% {left:-200%;}
+   100% {left:0%;}
+ }
+ 
+ @keyframes slide02 {
+   0% {left:0%;}
+   33% {left:0%;}
+   34% {left:-100%;}
+   66% {left:-100%;}
+   67% {left:100%;}
+   99% {left:100%;}
+   100% {left:0%;}
+ }
+ 
+ @keyframes slide03 {
+   0% {left:0%;}
+   33% {left:0%;}
+   34% {left:200%;}
+   66% {left:200%;}
+   67% {left:100%;}
+   99% {left:100%;}
+   100% {left:0%;}
+ }
+
+
+@media all and (max-width:767px){/*폰*/
+
+  img{
+    width: 350px;
+  }
+  .container {
+    display: none;
+}
+.button-wrapper {
+  flex-direction: row;
+}
+
+.custom-button {
+  width: 100%; /*버튼 너비 조정 */
+  max-width: 180px;
+}
+
+
+}
+@media all and (min-width:768px) and (max-width:1023px){ /*태블릿*/
+
+  img{
+    width: 450px;
+  }
+  .container {
+   display: none;
+}
+.button-wrapper {
+  flex-direction: row;
+}
+
+.custom-button {
+  width: 100%; /* 버튼 너비 조정 */
+  max-width: 400px;
+}
+
+}
